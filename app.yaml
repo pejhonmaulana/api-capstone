@@ -1,12 +1,26 @@
-runtime: php  # language of the app
-env: flex     # let app engine know we use flexible environment
-runtime_config:
- document_root: public   #folder where index.php is
+runtime: php
+env: flex
+
+runtime_config: document_root: public
+
 # Ensure we skip ".env", which is only for local development
-skip_files:
- - .env #we want to skip this to make sure we don’t mess stuff up on the server
+skip_files: 
+    - .env1
+
+automatic_scaling:
+    min_num_instances: 1
+    max_num_instances: 1
+
+resources:
+    cpu: 2
+    memory_gb: 4
+    disk_size_gb: 100
+
 env_variables:
- # Put production environment variables here.
- APP_ENV: local   # or production
- APP_DEBUG : true # or false 
- APP_KEY: base64:ldzQHXV2jkmHEq7sGJ+g/SDuP3fYgYW8qR2FJlnZAO8=
+    # Put production environment variables here.
+    APP_DEBUG: true
+    APP_ENV: local
+    APP_KEY: base64:ldzQHXV2jkmHEq7sGJ+g/SDuP3fYgYW8qR2FJlnZAO8=
+    APP_NAME: "Laravel"
+
+    LOG_LEVEL: debug
