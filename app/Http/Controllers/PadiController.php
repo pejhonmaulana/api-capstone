@@ -40,7 +40,7 @@ class PadiController extends Controller
         if ($request->gambar) {
             $image = $request->gambar;
             $image_name = $image->getClientOriginalName();
-            Image::make($image)->save(public_path().$image_name);
+            Image::make($image)->save(public_path("gambar").$image_name);
             $path = "http://localhost/capstone-app/public/gambar$image_name";
             $padi->gambar = $path;
         }
@@ -54,11 +54,6 @@ class PadiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function showkategori(Request $request)
-    {
-        Padi::with('category')->find($id);
-        
-    }
 
     /**
      * Display the specified resource.
@@ -68,7 +63,7 @@ class PadiController extends Controller
      */
     public function show($id)
     {
-        return Padi::with('category')->find($id);
+        return Padi::find($id);
     }
 
     /**

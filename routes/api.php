@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PupukController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PadiController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,8 @@ Route::get('kategori/{id}',[KategoriController::class,'show']);
 Route::post('kategori',[KategoriController::class,'create']);
 
 Route::get('padi',[PadiController::class,'index']);
+Route::get('id-padi/{id}',[PadiController::class,'show']);
 Route::post('padi',[PadiController::class,'create']);
+
+Route::post('login', [AuthController::class, 'login']);
+Route::post('register', [AuthController::class, 'register']);

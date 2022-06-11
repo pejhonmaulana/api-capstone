@@ -24,9 +24,9 @@ class KategoriController extends Controller
      */
     public function create(Request $request)
     {
-        $pupuk = new Kategori;
-        $pupuk->nama = $request->nama;
-        $pupuk->save();
+        $kategori = new Kategori;
+        $kategori->nama = $request->nama;
+        $kategori->save();
         return "data kategori  berhasil disimpan";
     }
 
