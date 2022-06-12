@@ -21,5 +21,14 @@ So what we do in this project?
 
 3. Upload database to CloudStorage
 4. Import database to CloudSQL
+    
+    Click import, choose file ".sql" from cloud storage.
+    
 5. Connecting database to VM Instances
+    Go to connections in Cloud SQL, check the "Public IP"
+    
+    Add Network use name "mysql-padtani" and Network fill with the External IP of VM Instances.
+    
 6. Deploy the API to VM Instances
+    
+    References to Deploy Laravel API to VM Instances : https://techvblogs.com/blog/deploy-laravel-project-apache-ubuntu
