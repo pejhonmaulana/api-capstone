@@ -4,6 +4,7 @@ Hello!
 So what we do in this project?
 1. Create Restful API in Laravel
 2. Make VM Instances and setting the VM with this parameter
+    
     VM Name : padtani-caps
     
     Region : asia-southeast1 // for better connection, choose the near server region around you
