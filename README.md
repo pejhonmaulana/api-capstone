@@ -1,4 +1,4 @@
-# PadTani api-capstone
+# PadTaniCC
 
 Hello!
 So what we do in this project?
