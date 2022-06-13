@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Padi;
+use App\Models\User;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Image;
@@ -17,7 +17,11 @@ class PadiController extends Controller
      */
     public function index()
     {
-        return Padi::all();
+        $padi = Padi::all();
+        return response()->json([
+            'message' => 'Success',
+            'data' => $padi
+        ]);
     }
 
     /**
