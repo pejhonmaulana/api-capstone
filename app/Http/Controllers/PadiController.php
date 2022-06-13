@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Padi;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Image;
@@ -49,7 +49,10 @@ class PadiController extends Controller
             $padi->gambar = $path;
         }
         $padi->save();
-        return "Data Padi Berhasil Di Tambah";
+        return response()->json([
+            'message'=>'success',
+            'data'=>$padi
+        ]);
     }
 
     /**
